@@ -1,0 +1,21 @@
+CREATED s0
+37 's0' { value: 's0-0' }
+37 'Main' { value: 's0-0' }
+553 's0' 'ERROR Breaking on 1'
+553 'Main' { error: 's0 Error: Breaking on 1' }
+CREATED s1
+800 's1' { value: 's1-0' }
+800 'Main' { value: 's1-0' }
+1453 's1' 'ERROR Breaking on 1'
+1453 'Main' { error: 's1 Error: Breaking on 1' }
+CREATED s2
+1616 's2' { value: 's2-0' }
+1616 'Main' { value: 's2-0' }
+2385 's2' 'ERROR Breaking on 1'
+2385 'Main' { error: 's2 Error: Breaking on 1' }
+CREATED s3
+2401 's3' { value: 's3-0' }
+2401 'Main' { value: 's3-0' }
+3016 'FINISH' 0
+3016 'Main' 'DONE'
+3016 'FINISH' 'DONE'
