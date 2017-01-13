@@ -1,6 +1,6 @@
 // Error in the source sequences causes error in mapped sequence
 // Unobserved error causes an exception to be thrown; to demonstrate, replace the last line with subscribe()
-let {Observable} = require("rx")
+let {Observable} = require("rxjs/Rx")
 require("./rxlog");
 
 function brokenMapper(v) {

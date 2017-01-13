@@ -1,4 +1,4 @@
-let {Observable, Observer} = require("rx")
+let {Observable} = require("rxjs/Rx")
 
 function StopWatch() {
     function currentTime() { return (new Date()).getTime(); }
@@ -13,10 +13,11 @@ function log(name, value) {
 }
 
 var logObserver =  function(name) {
-	return Observer.create( 
-      v=>log(name,v), 
-      err=>log(name, "ERROR "+err.message), 
-      ()=>log(name, "DONE"));
+	return {
+      next(v) { log(name,v); }, 
+      error(err) { log(name, "ERROR "+err.message); },
+      completed() { log(name, "DONE"); }
+	};
 }
 
 Observable.prototype.log = function(name) { return this.do(logObserver(name)); }

@@ -1,5 +1,5 @@
 // merged sequence of two intervals emits when any of the intervals emits
-let {Observable} = require("rx")
+let {Observable} = require("rxjs/Rx")
 let rxLog = require("./rxlog");
 
 let sequence = 

@@ -1,5 +1,5 @@
 // zipping two intervals shows that the zip emits when the slower observable emits
-let {Observable} = require("rx")
+let {Observable} = require("rxjs/Rx")
 require("./rxlog");
 
 Observable.zip(

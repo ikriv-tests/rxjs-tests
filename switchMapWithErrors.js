@@ -1,6 +1,6 @@
 // SwitchMapWithErrors demonstrates that switchMap() fails if the latest emitted observable throws an error,
 // but continues if an older observable throws an error, creating a sort of race condition
-let {Observable} = require("rx")
+let {Observable} = require("rxjs/Rx")
 require("./rxlog");
 
 // Cause an error when emitting value errorValue

@@ -1,4 +1,4 @@
-let {Observable} = require("rx")
+let {Observable} = require("rxjs/Rx")
 
 Observable.prototype.relativeTimeStamp = function() {
 	let start = Date.now();
@@ -21,9 +21,9 @@ let periodicBurst = Observable.timer(0,500).switchMap(burst).take(20); // 3 burs
 console.log("ORIGINAL SEQUENCE");
 periodicBurst.relativeTimeStamp().subscribe(printValue, noOp, ()=> {
 	console.log("DEBOUNCE");
-	periodicBurst.relativeTimeStamp().debounce(750).subscribe(printValue, noOp, ()=> {
+	periodicBurst.relativeTimeStamp().debounceTime(750).subscribe(printValue, noOp, ()=> {
 		console.log("SAMPLE");
-		periodicBurst.relativeTimeStamp().sample(750).subscribe(printValue, noOp, ()=> {
+		periodicBurst.relativeTimeStamp().sampleTime(750).subscribe(printValue, noOp, ()=> {
 			console.log("THROTTLE");
-			periodicBurst.relativeTimeStamp().throttle(750).subscribe(printValue)})})});
+			periodicBurst.relativeTimeStamp().throttleTime(750).subscribe(printValue)})})});
 			

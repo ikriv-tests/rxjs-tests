@@ -1,6 +1,6 @@
 // switchMap() takes input observable (request stream), maps each request to a response stream and keeps track of the last repsonse stream
 // In this example we create a new interval observable every 800ms, with increasing intervals
-let {Observable} = require("rx")
+let {Observable} = require("rxjs/Rx")
 require("./rxlog");
 
 function createChildObservable(nChild) {

@@ -4,7 +4,7 @@
   "description": "Assorted RxJS experiments",
   "main": "mapWithError.js",
   "dependencies": {
-    "rx": "^4.1.0"
+    "rxjs": "^5.0.3"
   },
   "devDependencies": {},
   "scripts": {
